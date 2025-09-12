@@ -13,10 +13,10 @@
     header p { margin: 5px 0; }
     nav { margin-top: 10px; }
     nav a { color: white; margin: 0 15px; font-weight: bold; }
-    
+
     section { padding: 50px 20px; max-width: 1000px; margin: auto; }
     h2 { color: #007ACC; margin-bottom: 20px; text-align: center; }
-    
+
     .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
     .card:hover { transform: translateY(-5px); }
@@ -24,11 +24,11 @@
     .card h3 { margin-top: 0; }
     .button { display: inline-block; padding: 10px 15px; background: #007ACC; color: white; border-radius: 5px; margin-top: 10px; transition: background 0.2s; }
     .button:hover { background: #005a99; }
-    
+
     .contact-info { text-align: center; }
     .resume-embed { width: 100%; height: 600px; border: none; border-radius: 10px; }
     footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px; }
-    
+
     @media (max-width: 600px) {
       header h1 { font-size: 2em; }
       nav a { display: block; margin: 10px 0; }
@@ -67,6 +67,10 @@
     <!-- Tableau Project 1 -->
     <div class="card">
       <h3>Sales Dashboard (Tableau)</h3>
+      <!-- Download / View Button -->
+      <a href="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard" 
+         class="button" target="_blank">View / Download Dashboard</a>
+      <!-- Embedded Tableau -->
       <iframe src="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard?:showVizHome=no&:embed=true"
               width="100%" height="600px" frameborder="0"></iframe>
       <p>Interactive sales dashboard with filters and trends.</p>
@@ -75,6 +79,10 @@
     <!-- Tableau Project 2 -->
     <div class="card">
       <h3>Market Flash Executive Dashboard (Tableau)</h3>
+      <!-- Download / View Button -->
+      <a href="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1" 
+         class="button" target="_blank">View / Download Dashboard</a>
+      <!-- Embedded Tableau -->
       <iframe src="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1?:showVizHome=no&:embed=true"
               width="100%" height="600px" frameborder="0"></iframe>
       <p>Executive dashboard providing real-time market insights and analytics.</p>
@@ -106,4 +114,3 @@
 
 </body>
 </html>
-
