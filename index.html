@@ -3,71 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
+  <title>Shivaranjini Ashok | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f5f5f5; color: #333; }
+    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+    a { text-decoration: none; }
     header { background: #007ACC; color: white; padding: 20px 0; text-align: center; }
-    header h1 { margin: 0; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { margin: 5px 0; }
+    nav { margin-top: 10px; }
+    nav a { color: white; margin: 0 15px; font-weight: bold; }
+    
     section { padding: 50px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #007ACC; margin-bottom: 20px; }
+    h2 { color: #007ACC; margin-bottom: 20px; text-align: center; }
+    
     .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .card iframe, .card img { width: 100%; border-radius: 10px; }
-    footer { text-align: center; padding: 20px; background: #333; color: white; }
-    a.button { display: inline-block; padding: 10px 15px; background: #007ACC; color: white; border-radius: 5px; text-decoration: none; margin-top: 10px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-5px); }
+    .card img, .card iframe { width: 100%; border-radius: 10px; }
+    .card h3 { margin-top: 0; }
+    .button { display: inline-block; padding: 10px 15px; background: #007ACC; color: white; border-radius: 5px; margin-top: 10px; transition: background 0.2s; }
+    .button:hover { background: #005a99; }
+    
+    .contact-info { text-align: center; }
+    .resume-embed { width: 100%; height: 600px; border: none; border-radius: 10px; }
+    footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px; }
+    
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav a { display: block; margin: 10px 0; }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Your Name</h1>
+  <h1>Shivaranjini Ashok</h1>
   <p>Data Enthusiast | Excel & Tableau | Portfolio</p>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>Hello! I'm a data enthusiast with expertise in Excel, Tableau, and data visualization. I love creating dashboards and analytics solutions that help organizations make data-driven decisions.</p>
+  <p>Hello! I'm <strong>Shivaranjini Ashok</strong>, a data enthusiast with expertise in Excel, Tableau, and data visualization. I love creating dashboards and analytics solutions that help organizations make data-driven decisions.</p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
-    <!-- Excel Project Example -->
+    <!-- Excel Project -->
     <div class="card">
       <h3>Financial Analysis (Excel)</h3>
-      <img src="screenshots/excel-financial.png" alt="Financial Analysis">
-      <p>Pivot tables, charts, and data insights from financial datasets.</p>
+      <img src="screenshots/excel-financial.png" alt="Financial Analysis Excel">
+      <p>Pivot tables, charts, and insights from financial datasets.</p>
       <a href="projects/excel-financial.xlsx" class="button" target="_blank">Download Excel</a>
     </div>
 
-    <!-- Tableau Project Example -->
+    <!-- Tableau Project 1 -->
     <div class="card">
       <h3>Sales Dashboard (Tableau)</h3>
-      <iframe src="https://public.tableau.com/views/YOUR_DASHBOARD_LINK" height="400" frameborder="0"></iframe>
+      <iframe src="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard?:showVizHome=no&:embed=true"
+              width="100%" height="600px" frameborder="0"></iframe>
       <p>Interactive sales dashboard with filters and trends.</p>
     </div>
 
-    <!-- More projects can be added here -->
+    <!-- Tableau Project 2 -->
+    <div class="card">
+      <h3>Market Flash Executive Dashboard (Tableau)</h3>
+      <iframe src="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1?:showVizHome=no&:embed=true"
+              width="100%" height="600px" frameborder="0"></iframe>
+      <p>Executive dashboard providing real-time market insights and analytics.</p>
+    </div>
   </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p style="text-align:center;">You can view or download my resume below:</p>
+  <div style="text-align:center;">
+    <a href="projects/resume/Shivaranjini_Ashok_Resume.pdf" class="button" target="_blank">Download Resume</a>
+  </div>
+  <iframe src="projects/resume/Shivaranjini_Ashok_Resume.pdf" class="resume-embed"></iframe>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-  <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  <div class="contact-info">
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 Your Name | Built with ❤️ and GitHub Pages
+  &copy; 2025 Shivaranjini Ashok | Built with ❤️ and GitHub Pages
 </footer>
 
 </body>
 </html>
+
