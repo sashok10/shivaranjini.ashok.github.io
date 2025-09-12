@@ -1,116 +1,133 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shivaranjini Ashok | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    a { text-decoration: none; }
-    header { background: #007ACC; color: white; padding: 20px 0; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5em; }
-    header p { margin: 5px 0; }
-    nav { margin-top: 10px; }
-    nav a { color: white; margin: 0 15px; font-weight: bold; }
-
-    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #007ACC; margin-bottom: 20px; text-align: center; }
-
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
-    .card:hover { transform: translateY(-5px); }
-    .card img, .card iframe { width: 100%; border-radius: 10px; }
-    .card h3 { margin-top: 0; }
-    .button { display: inline-block; padding: 10px 15px; background: #007ACC; color: white; border-radius: 5px; margin-top: 10px; transition: background 0.2s; }
-    .button:hover { background: #005a99; }
-
-    .contact-info { text-align: center; }
-    .resume-embed { width: 100%; height: 600px; border: none; border-radius: 10px; }
-    footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px; }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2em; }
-      nav a { display: block; margin: 10px 0; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivaranjini Ashok – Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Shivaranjini Ashok</h1>
-  <p>Data Enthusiast | Excel & Tableau | Portfolio</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <!-- Sticky navigation -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">SA</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hello! I'm <strong>Shivaranjini Ashok</strong>, a data enthusiast with expertise in Excel, Tableau, and data visualization. I love creating dashboards and analytics solutions that help organizations make data-driven decisions.</p>
-</section>
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-inner container">
+            <h1>Hi, I’m&nbsp;<span class="accent">Shivaranjini Ashok</span></h1>
+            <h2 class="subtitle">Data Analyst & Dashboard Specialist</h2>
+            <p class="tagline">Turning data into actionable insights through Excel, Tableau, and analytics.</p>
+            <a href="#projects" class="btn-primary">See my work</a>
+        </div>
+    </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <!-- Excel Project -->
-    <div class="card">
-      <h3>Financial Analysis (Excel)</h3>
-      <img src="screenshots/excel-financial.png" alt="Financial Analysis Excel">
-      <p>Pivot tables, charts, and insights from financial datasets.</p>
-      <a href="projects/excel-financial.xlsx" class="button" target="_blank">Download Excel</a>
-    </div>
+    <!-- Main content container -->
+    <main class="container">
 
-    <!-- Tableau Project 1 -->
-    <div class="card">
-      <h3>Sales Dashboard (Tableau)</h3>
-      <!-- Download / View Button -->
-      <a href="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard" 
-         class="button" target="_blank">View / Download Dashboard</a>
-      <!-- Embedded Tableau -->
-      <iframe src="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard?:showVizHome=no&:embed=true"
-              width="100%" height="600px" frameborder="0"></iframe>
-      <p>Interactive sales dashboard with filters and trends.</p>
-    </div>
+        <!-- About -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="profile-photo-container">
+                    <img src="profile.jpg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+                </div>
+                <div class="card bio-card">
+                    <p>
+                        I’m Shivaranjini Ashok, a data enthusiast specializing in Excel, Tableau, and data visualization. 
+                        I enjoy creating dashboards and analytics solutions that help organizations make data-driven decisions.
+                        Skilled in SQL, Python, Excel, and Tableau, I aim to transform complex data into meaningful insights.
+                    </p>
+                    <p>Email: <a href="mailto:shivaranjini.ashok@gmail.com">shivaranjini.ashok@gmail.com</a><br>
+                       I speak English and am continuously learning new analytics tools.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Tableau Project 2 -->
-    <div class="card">
-      <h3>Market Flash Executive Dashboard (Tableau)</h3>
-      <!-- Download / View Button -->
-      <a href="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1" 
-         class="button" target="_blank">View / Download Dashboard</a>
-      <!-- Embedded Tableau -->
-      <iframe src="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1?:showVizHome=no&:embed=true"
-              width="100%" height="600px" frameborder="0"></iframe>
-      <p>Executive dashboard providing real-time market insights and analytics.</p>
-    </div>
-  </div>
-</section>
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
 
-<section id="resume">
-  <h2>Resume</h2>
-  <p style="text-align:center;">You can view or download my resume below:</p>
-  <div style="text-align:center;">
-    <a href="projects/resume/Shivaranjini_Ashok_Resume.pdf" class="button" target="_blank">Download Resume</a>
-  </div>
-  <iframe src="projects/resume/Shivaranjini_Ashok_Resume.pdf" class="resume-embed"></iframe>
-</section>
+            <!-- Project Grid -->
+            <div class="grid-4 project-grid">
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-info">
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-  </div>
-</section>
+                <!-- Excel Project -->
+                <div class="card project-card" data-category="excel">
+                    <h3>Financial Analysis (Excel)</h3>
+                    <img src="screenshots/excel-financial.png" alt="Financial Analysis Excel">
+                    <p>Pivot tables, charts, and insights from financial datasets.</p>
+                    <a href="projects/excel-financial.xlsx" class="cert-link" target="_blank">Download Excel</a>
+                </div>
 
-<footer>
-  &copy; 2025 Shivaranjini Ashok | Built with ❤️ and GitHub Pages
-</footer>
+                <!-- Tableau Project 1 -->
+                <div class="card project-card" data-category="dashboard">
+                    <h3>Sales Dashboard (Tableau)</h3>
+                    <a href="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard" 
+                       class="cert-link" target="_blank">View / Download Dashboard</a>
+                    <iframe src="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard?:showVizHome=no&:embed=true"
+                            width="100%" height="500px" frameborder="0"></iframe>
+                    <p>Interactive sales dashboard with filters and trends.</p>
+                </div>
 
+                <!-- Tableau Project 2 -->
+                <div class="card project-card" data-category="dashboard">
+                    <h3>Market Flash Executive Dashboard (Tableau)</h3>
+                    <a href="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1" 
+                       class="cert-link" target="_blank">View / Download Dashboard</a>
+                    <iframe src="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1?:showVizHome=no&:embed=true"
+                            width="100%" height="500px" frameborder="0"></iframe>
+                    <p>Executive dashboard providing real-time market insights and analytics.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="section">
+            <h2 class="section-title">Resume</h2>
+            <p style="text-align:center;">You can view or download my resume below:</p>
+            <div style="text-align:center;">
+                <a href="projects/resume/Shivaranjini_Ashok_Resume.pdf" class="btn-primary" target="_blank">Download Resume</a>
+            </div>
+            <iframe src="projects/resume/Shivaranjini_Ashok_Resume.pdf" width="100%" height="600px" style="border:none; border-radius:10px;"></iframe>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Let’s Work Together</h2>
+            <form action="https://formspree.io/f/xgvkeazz" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Shivaranjini Ashok</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
