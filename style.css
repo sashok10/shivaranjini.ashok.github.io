@@ -5,12 +5,34 @@ body { font-family: 'Inter', sans-serif; line-height:1.6; color:#333; background
 /* Container */
 .container { width:90%; max-width:1200px; margin:auto; }
 
-/* Navbar */
-.navbar { display:flex-end; justify-content:space-between; align-items:center; padding:1rem 0; background:#fff; position:sticky; top:0; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-.navbar .logo { font-weight:600; font-size:1.5rem; }
-.nav-links { list-style:none; display:flex; gap:1.5rem; }
-.nav-links a { text-decoration:none; color:#333; font-weight:500; transition:color 0.3s; }
-.nav-links a:hover { color:#007BFF; }
+
+/* Make the navbar use flexbox */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* aligns items to the right */
+    align-items: center;       /* vertically centers items */
+    padding: 10px 20px;        /* optional spacing */
+}
+
+/* Optional: spacing between links */
+.nav-links {
+    display: flex;
+    gap: 20px; /* space between each link */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333; /* your preferred color */
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #007BFF; /* hover color */
+}
+
 
 /* Hero */
 #hero { display:flex; align-items:center; justify-content:center; text-align:center; padding:6rem 1rem; background:#007BFF; color:#fff; }
