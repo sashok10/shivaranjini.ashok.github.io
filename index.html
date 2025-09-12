@@ -1,186 +1,238 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shivaranjini Ashok – Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
-    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #f4f4f9; color: #333; scroll-behavior: smooth; }
-    a { text-decoration: none; transition: 0.3s; }
-    header { background: #007ACC; color: white; position: sticky; top: 0; z-index: 1000; }
-    nav.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: auto; }
-    nav .logo { font-weight: 700; font-size: 1.5em; }
-    nav ul.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-    nav ul.nav-links li a { color: white; font-weight: 500; }
-    nav ul.nav-links li a:hover { color: #FFD700; }
-
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.8s ease-in-out; }
-    section.visible { opacity: 1; transform: translateY(0); }
-
-    #hero { text-align: center; padding: 120px 20px; background: linear-gradient(135deg, #007ACC, #00BFFF); color: white; }
-    #hero h1 { font-size: 2.8em; margin: 0; }
-    #hero h1 .accent { color: #FFD700; }
-    #hero h2.subtitle { font-weight: 400; margin-top: 10px; font-size: 1.5em; }
-    #hero p.tagline { margin-top: 20px; font-size: 1.2em; }
-    .btn-primary { background: #FFD700; color: #007ACC; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: 600; transition: all 0.3s; }
-    .btn-primary:hover { background: #FFC300; transform: translateY(-3px); }
-
-    .about-grid { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
-    .profile-photo-container img { border-radius: 10px; max-width: 300px; width: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-    .bio-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex: 1; min-width: 300px; }
-
-    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-    .project-card { background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 20px; transition: all 0.3s; position: relative; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
-    .project-card h3 { margin-top: 0; }
-    .project-card iframe { border-radius: 10px; margin-top: 10px; }
-    .cert-link { display: inline-block; margin-top: 10px; padding: 8px 15px; background: #007ACC; color: white; border-radius: 5px; transition: 0.3s; }
-    .cert-link:hover { background: #005a99; transform: translateY(-2px); }
-
-    .filter-controls { text-align: center; margin-bottom: 20px; }
-    .filter-btn { background: #007ACC; color: white; border: none; padding: 8px 15px; margin: 0 5px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-    .filter-btn:hover, .filter-btn.active { background: #FFD700; color: #007ACC; }
-
-    #resume iframe { border-radius: 10px; border: none; width: 100%; height: 600px; margin-top: 20px; }
-
-    form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
-    form input, form textarea { padding: 12px; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
-    form button { width: fit-content; align-self: flex-start; background: #007ACC; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-    form button:hover { background: #005a99; transform: translateY(-2px); }
-
-    footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 40px; }
-    footer .social-links a { margin: 0 10px; color: white; transition: 0.3s; }
-    footer .social-links a:hover { color: #FFD700; }
-
-    @media(max-width:768px) { .about-grid { flex-direction: column; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shivaranjini Ashok– Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Welcome toast -->
+    
 
-<header>
-    <nav class="navbar container">
-        <div class="logo">SA</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Sticky navigation -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">OA</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="hero">
-    <div class="hero-inner container">
-        <h1>Hi, I’m&nbsp;<span class="accent">Shivaranjini Ashok</span></h1>
-        <h2 class="subtitle">Data Analyst & Dashboard Specialist</h2>
-        <p class="tagline">Turning data into actionable insights through Excel, Tableau, and analytics.</p>
-        <a href="#projects" class="btn-primary">See my work</a>
-    </div>
-</section>
-
-<main class="container">
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="profile-photo-container">
-                <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
-            </div>
-            <div class="bio-card">
-                <p>I’m Shivaranjini Ashok, a data enthusiast specializing in Excel, Tableau, and data visualization. I enjoy creating dashboards and analytics solutions that help organizations make data-driven decisions. Skilled in SQL, Python, Excel, and Tableau, I aim to transform complex data into meaningful insights.</p>
-                <p>Email: <a href="mailto:shivaranjini.ashok@gmail.com">shivaranjini.ashok@gmail.com</a></p>
-            </div>
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-inner container">
+            <h1>Hi, I’m&nbsp;<span class="accent">Shivaranjini Ashok</span></h1>
+            <h2 class="subtitle">Data Analyst &nbsp;&nbsp;|&nbsp;&nbsp;Data Analyst</h2>
+            <p class="tagline"> ...........</p>
+            <a href="#projects" class="btn-primary">See my work</a>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="filter-controls">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="excel">Excel</button>
-            <button class="filter-btn" data-filter="dashboard">Tableau</button>
-        </div>
+    <!-- Main content container -->
+    <main class="container">
 
-        <div class="project-grid">
-            <!-- Excel Project -->
-            <div class="project-card" data-category="excel">
-                <h3>Financial Analysis (Excel)</h3>
-                <img src="screenshots/excel-financial.png" alt="Financial Analysis Excel">
-                <p>Pivot tables, charts, and insights from financial datasets.</p>
-                <a href="projects/excel-financial.xlsx" class="cert-link" target="_blank">Download Excel</a>
+        <!-- About -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="profile-photo-container">
+                    <img src="unnamed.jpg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+                </div>
+                <div class="card bio-card">
+                    <p>
+                        I’m Shivaranjini  Shivaranjini Ashok, a data professional with a passion for turning complex information into
+                    
+                    </p>
+                    <p>Email: <a href="mailto:Shivaranjini Ashokosw@gmail.com">Shivaranjini Ashokosw@gmail.com</a><br>
+                    Phone: +49 17688093554<br>
+                    I speak English (C1) and German (B1)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline horizontal">
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Bachelor of Science in Infomation Technology </h3>
+                        <p class="university"> Sri Krishna Institute of Technology</p>
+                        <span class="timeline-date">2012 - 2016</span>
+                        <i class="fas fa-chart-line"></i>
+                        <i class="fa-solid fa-coins"></i>
+
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>MSc – International Business Managemnet </h3>
+                        <p class="university"> Coventry University United Kingdom </p>
+                        <span class="timeline-date">2022 - 2023</span>
+                        <i class="fa-solid fa-database"></i>
+                        <i class="fa-solid fa-table"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                        <i class="fa-solid fa-file-excel"></i>
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Google Data Analytics Professional Certificate</h3>
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/F2CRXHUH5P56" target="_blank" class="cert-link">View on Coursera</a>
+                </div>
+                <div class="card">
+                    <h3>Excel Fundamentals for Data Analysis</h3>
+                    <a href="https://www.coursera.org/account/accomplishments/records/QUKBFXUJERGB" target="_blank" class="cert-link">View Certification</a>
+                </div>
+                <div class="card">
+                    <h3>Tableau Desktop / Online Expert</h3>
+                    <a href="https://www.tableau.com" target="_blank" class="cert-link">Verify Certification</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Dispatch Operations Team Lead</h3>
+                        <p class="company">PGH EXPRESS LP <span class="timeline-date">2021 – 2022</span></p>
+                        <ul class="job-description">
+                            <li>Led daily dispatch operations, managing a fleet of drivers and coordinating logistics to ensure efficient load delivery and high service standards.</li>
+                            <li>Successfully booked freight loads generating over $1.5 million in gross revenue, optimizing routes and minimizing deadhead time.</li>
+                            <li>Built and maintained relationships with 30+ freight brokers, handling setup agreements and rate negotiations.</li>
+                            <li>Monitored and analyzed driver performance, providing guidance and support to maintain productivity and compliance.</li>
+                            <li>Played a key role in scaling business profitability through operational oversight and strategic load planning.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Marketing Analytics Specialist</h3>
+                        <p class="company">HAVI Global Solutions Europe GmbH <span class="timeline-date">2023 – 2025</span></p>
+                        <ul class="job-description">
+                            <li>Developed and maintained ETL pipelines to ingest and clean market and sales data for analytics and dashboarding purposes.</li>
+                            <li>Migrated Tableau reports from server‑based systems to Tableau Cloud, enhancing scalability and access for global teams.</li>
+                            <li>Created interactive dashboards using SQL, Power BI, and Tableau to visualize trends and drive data‑informed decisions.</li>
+                            <li>Automated reporting workflows, reducing manual efforts and improving data availability for stakeholders.</li>
+                            <li>Collaborated cross‑functionally to support insight generation and deliver presentations that translated complex data into actionable business value.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Workforce Analyst</h3>
+                        <p class="company">Telus International<span class="timeline-date">2025 – 2025</span></p>
+                        <ul class="job-description">
+                            <li>Obtain and evaluate quantifiable performance metrics (e.g., call volume, AHT, service level) to recommend actions addressing performance gaps.</li>
+                            <li>Serve as the central communication point for performance updates, cascading critical information to stakeholders.</li>
+                            <li>Identify challenges impacting service levels and develop appropriate solutions.</li>
+                            <li>Escalate significant performance issues to Management and ensure proper documentation of major incidents.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <!-- Filter controls -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
             </div>
 
-            <!-- Tableau Project 1 -->
-            <div class="project-card" data-category="dashboard">
-                <h3>Sales Dashboard (Tableau)</h3>
-                <a href="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard" class="cert-link" target="_blank">View / Download Dashboard</a>
-                <iframe src="https://public.tableau.com/views/SalesDashboard-FirstProject/SalesDashboard?:showVizHome=no&:embed=true" width="100%" height="400px"></iframe>
+            <div class="grid-4 project-grid">
+                <!-- Project 1 -->
+                <div class="card project-card" data-category="ml">
+                    <h3>Risk‑Adjusted Credit Pricing Dashboard</h3>
+                    <p>Trained cost‑sensitive models (XGBoost, LightGBM, Logistic Regression) to better predict credit risk and assign prices.</p>
+                    <div class="tools">
+                        <i class="fab fa-python"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <a href="https://Shivaranjini Shivaranjini Ashok.github.io/credit_calculator" target="_blank" class="cert-link">Visit Project Website</a>
+                </div>
+
+                <div class="card project-card" data-category="ml">
+                    <h3>Synthetic Credit Risk Data Generation</h3>
+                    <p>Used neural networks (Keras, TensorFlow) to generate synthetic credit‑risk data.</p>
+                    <div class="tools">
+                        <i class="fab fa-r-project"></i>
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="automation">
+                    <h3>SharePoint HUB – Happy Meal Menu</h3>
+                    <p>Built a SharePoint portal with PowerAutomate integration for workflow automation.</p>
+                    <div class="tools">
+                        <i class="fab fa-microsoft"></i>
+                        <i class="fas fa-robot"></i>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="dashboard">
+                    <h3>Tableau Report Generator</h3>
+                    <p>Dashboard for generating and exporting reports directly via Tableau Server.</p>
+                    <div class="tools">
+                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <a href="https://Shivaranjini Shivaranjini Ashok.github.io/tableau_report/" target="_blank" class="cert-link">Visit Dashboard</a>
+                </div>
             </div>
+        </section>
 
-            <!-- Tableau Project 2 -->
-            <div class="project-card" data-category="dashboard">
-                <h3>Market Flash Executive Dashboard (Tableau)</h3>
-                <a href="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1" class="cert-link" target="_blank">View / Download Dashboard</a>
-                <iframe src="https://public.tableau.com/views/MarketFlashExceutiveDashboard/Dashboard1?:showVizHome=no&:embed=true" width="100%" height="400px"></iframe>
-            </div>
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Let’s Work Together</h2>
+            <form action="https://formspree.io/f/xgvkeazz" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© <span id="year"></span> Shivaranjini Ashok</p>
+        <div class="social-links">
+            <a href="https://github.com/Shivaranjini Shivaranjini Ashok" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/Shivaranjini -Shivaranjini Ashok/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
+    </footer>
 
-    <section id="resume" class="section">
-        <h2 class="section-title">Resume</h2>
-        <div style="text-align:center;">
-            <a href="projects/resume/Shivaranjini_Ashok_Resume.pdf" class="btn-primary" target="_blank">Download Resume</a>
-        </div>
-        <iframe src="projects/resume/Shivaranjini_Ashok_Resume.pdf"></iframe>
-    </section>
-
-    <section id="contact" class="section">
-        <h2 class="section-title">Let’s Work Together</h2>
-        <form action="https://formspree.io/f/xgvkeazz" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-    </section>
-</main>
-
-<footer>
-    <p>© <span id="year"></span> Shivaranjini Ashok</p>
-    <div class="social-links">
-        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-</footer>
-
-<script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Fade-in sections on scroll
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) entry.target.classList.add('visible');
-        });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
-
-    // Filter projects
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('.project-card');
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            projects.forEach(p => {
-                if(filter === 'all' || p.dataset.category === filter) p.style.display = 'block';
-                else p.style.display = 'none';
-            });
-        });
-    });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
